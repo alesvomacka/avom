@@ -20,3 +20,6 @@ You can install the development version of avom from
 # install.packages("devtools")
 devtools::install_github("alesvomacka/avom")
 ```
+
+`ggplot2` theme uses [Fira
+Sans](https://fonts.google.com/specimen/Fira+Sans) font.
