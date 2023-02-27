@@ -16,6 +16,9 @@
     <loc>https://alesvomacka.github.io/avom/index.html</loc>
   </url>
   <url>
+    <loc>https://alesvomacka.github.io/avom/news/index.html</loc>
+  </url>
+  <url>
     <loc>https://alesvomacka.github.io/avom/reference/avom_palette_generator.html</loc>
   </url>
   <url>
@@ -29,5 +32,8 @@
   </url>
   <url>
     <loc>https://alesvomacka.github.io/avom/reference/scale_colour_avom.html</loc>
+  </url>
+  <url>
+    <loc>https://alesvomacka.github.io/avom/reference/theme_avom.html</loc>
   </url>
 </urlset>
