@@ -20,9 +20,3 @@ theme_avom(
 \description{
 ggplot2 theme based on gruvbox color palette and Fira Sans font.
 }
-\examples{
-ggplot2::ggplot(data = mtcars,
-                mapping = ggplot2::aes(x = mpg, y = hp)) +
-         ggplot2::geom_point() +
-         theme_avom()
-}

@@ -1,13 +1,10 @@
 .onLoad <- function(libname, pkgname) {
 
-  sysfonts::font_paths(system.file("fonts", package = "avom"))
-  sysfonts::font_add(family = "Fira Sans",
-                     regular = "FiraSans-Regular.ttf",
-                     bold = "FiraSans-Bold.ttf",
-                     italic = "FiraSans-Italic.ttf",
-                     bolditalic = "FiraSans-BoldItalic.ttf")
-  showtext::showtext_auto()
-  showtext::showtext_opts(dpi = 200)
+  systemfonts::register_font(name = "Fira-Sans",
+                             plain = system.file("fonts", "FiraSans-Regular.ttf", package = "avom"),
+                             bold = system.file("fonts", "FiraSans-Bold.ttf", package = "avom"),
+                             bolditalic = system.file("fonts", "FiraSans-BoldItalic.ttf", package = "avom"),
+                             italic = system.file("fonts", "FiraSans-Italic.ttf", package = "avom"))
 
 }
 
