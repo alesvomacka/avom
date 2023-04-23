@@ -9,6 +9,12 @@
 #'
 #' @export
 #'
+#' @examples \dontrun{
+#' ggplot2::ggplot(data = mtcars,
+#'                 mapping = ggplot2::aes(x = mpg, y = hp)) +
+#'          ggplot2::geom_point() +
+#'          theme_avom()
+#'          }
 theme_avom <- function(panel.grid.major = ggplot2::element_line(),
                        panel.grid.minor = ggplot2::element_blank(),
                        ...) {
@@ -18,7 +24,7 @@ theme_avom <- function(panel.grid.major = ggplot2::element_line(),
         legend.key = ggplot2::element_rect(fill = "#f9f5d7"),
         panel.grid.minor = panel.grid.minor,
         panel.grid.major = panel.grid.major,
-        text  = ggplot2::element_text(family = "Fira-Sans"),
+        text  = ggplot2::element_text(family = "Fira Sans"),
         title = ggplot2::element_text(face = "bold"),
         plot.title.position = "plot",
         plot.caption.position = "plot",
