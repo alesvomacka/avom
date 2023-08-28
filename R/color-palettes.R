@@ -28,7 +28,10 @@ avom_palettes <- function(palette = "gruvbox_light", n = NA) {
     gruvbox_dark  = c("#cc241d", "#98971a", "#458588", "#d79921", "#b16286", "#689d6a", "#d65d0e"),
 
     # Diverging
-    gruvbox_div   = c("#b9211a", "#cc241d", "#fb4934", "#fac64c", "#83a598", "#649590", "#458588")
+    gruvbox_div   = c("#b9211a", "#cc241d", "#fb4934", "#fac64c", "#83a598", "#649590", "#458588"),
+
+    # Sequential
+    gruvbox_seq   = c("#d65d0e", "#de702d", "#e68246", "#ed945e", "#f3a577", "#f8b790", "#fcc8aa", "#ffdac4")
     )
 
   if (!is.na(n)) {
