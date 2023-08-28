@@ -1,11 +1,9 @@
-.onLoad <- function(libname, pkgname) {
+.onAttach <- function(libname, pkgname){
 
-  fs_font_dir <- system.file("fonts", "fira-sans", package="avom")
+  if(rstudioapi::isAvailable()) {
+    device <- "ragg"
+    rstudioapi::writeRStudioPreference("graphics_backend", device)
+    packageStartupMessage((paste("Rstudio now uses", device, "as graphical backend.")))
+  }
 
 }
-
-
-
-
-
-
