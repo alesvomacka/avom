@@ -4,18 +4,14 @@
 \alias{theme_avom}
 \title{ggplot2 theme from avom}
 \usage{
-theme_avom(
-  panel.grid.major = ggplot2::element_line(),
-  panel.grid.minor = ggplot2::element_blank(),
-  ...
-)
+theme_avom(font_family = "Fira Sans", font_size = 10, ...)
 }
 \arguments{
-\item{panel.grid.major}{Controls major leading lines. Expects \code{\link[ggplot2:element]{ggplot2::element_line()}} line function.}
+\item{font_family}{Font family. Defaults to "Fira Sans".}
 
-\item{panel.grid.minor}{Controls minor leading lines.}
+\item{font_size}{Baseline size for text. Defaults to 10.}
 
-\item{...}{Other arguments to be passed to \code{\link[ggplot2:theme]{ggplot2::theme()}}.}
+\item{...}{Other arguments passed to \code{\link[ggplot2:ggtheme]{ggplot2::theme_minimal()}}.}
 }
 \description{
 ggplot2 theme based on gruvbox color palette and Fira Sans font.
