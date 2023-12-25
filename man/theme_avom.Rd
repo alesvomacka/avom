@@ -4,12 +4,25 @@
 \alias{theme_avom}
 \title{ggplot2 theme from avom}
 \usage{
-theme_avom(font_family = "Fira Sans", font_size = 10, ...)
+theme_avom(
+  font_family = "Fira Sans",
+  font_size = 10,
+  font_color = "#282828",
+  backround_color = "#fbf1c7",
+  gridlines_color = "#d1c8c0",
+  ...
+)
 }
 \arguments{
 \item{font_family}{Font family. Defaults to "Fira Sans".}
 
 \item{font_size}{Baseline size for text. Defaults to 10.}
+
+\item{font_color}{Font color. Defaults to "#282828".}
+
+\item{backround_color}{Backround color. Defaults to "#fbf1c7".}
+
+\item{gridlines_color}{Color of gridlines. Defaults to "#d1c8c0".}
 
 \item{...}{Other arguments passed to \code{\link[ggplot2:ggtheme]{ggplot2::theme_minimal()}}.}
 }
