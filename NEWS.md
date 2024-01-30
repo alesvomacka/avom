@@ -1,3 +1,6 @@
+# avom 0.2.1
+* Switched plot.caption from `ggtext::element_markdown()` to `ggtext::element_textbox_simple()`.
+
 # avom 0.2
 * Updated `theme_avom()` to respect text hierarchy.
 * New function `avom_ggplot2_defaults()` to quickly set geom properties.
