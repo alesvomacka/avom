@@ -20,5 +20,8 @@ S7 object of class "avom_palette".
 Creates a color palette, which is a S7 object of class "avom_palette", to be used in other functions.
 }
 \examples{
-avom_colors(name = "gruvbox", type = "nominal", colors = c("#cc241d", "#98971a", "#458588", "#d79921", "#b16286", "#d65d0e", "#689d6a"))
+\dontrun{
+avom_colors(name = "gruvbox", type = "nominal",
+colors = c("#cc241d", "#98971a", "#458588", "#d79921", "#b16286", "#d65d0e", "#689d6a"))
+}
 }
