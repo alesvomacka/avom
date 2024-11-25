@@ -2,7 +2,7 @@
 
 export(avom_ggplot2_defaults)
 export(avom_ggsave)
-export(avom_palettes)
+export(avom_palette)
 export(scale_color_avom)
 export(scale_colour_avom)
 export(scale_fill_avom)

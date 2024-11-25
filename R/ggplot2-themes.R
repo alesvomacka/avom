@@ -46,5 +46,9 @@ theme_avom <- function(font_family = "Fira Sans", font_size = 10,
       panel.grid.minor = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = gridlines_color,
                                                linetype = "dashed"),
+      # Legend
+      legend.position = "bottom",
+      legend.text = ggplot2::element_text(size = ggplot2::rel(1)),
+      legend.title = ggplot2::element_text(size = ggplot2::rel(1)),
       ...)
 }
