@@ -7,9 +7,12 @@
 #' @param colors Vector of colors.
 #' 
 #' @return S7 object of class "avom_palette".
-#' 
 #' @examples
-#' avom_colors(name = "gruvbox", type = "nominal", colors = c("#cc241d", "#98971a", "#458588", "#d79921", "#b16286", "#d65d0e", "#689d6a"))
+#' \dontrun{
+#' avom_colors(name = "gruvbox", type = "nominal",
+#' colors = c("#cc241d", "#98971a", "#458588", "#d79921", "#b16286", "#d65d0e", "#689d6a"))
+#' }
+
 avom_colors <- S7::new_class(name = "avom_palette",
                              properties = list(name = S7::class_character,
                                                 type = S7::class_character,
@@ -78,6 +81,7 @@ avom_palette <- function(palette = "catpuccin_latte") {
 #' 
 #' @return Function to be used in [avom::scale_colour_avom()] and [avom::scale_fill_avom()].
 #' 
+#' @export
 #' @examples
 #' palette_gen(palette = "catpuccin_latte", direction = 1)
 
@@ -108,6 +112,7 @@ palette_gen <- function(palette = "catpuccin_latte", direction = 1) {
 #' @param n Number of colors to select.
 #' 
 #' @return Vector of colors.
+#' @export
 #' 
 #' @examples select_diverging(palette = c("#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"), n = 4)
 
