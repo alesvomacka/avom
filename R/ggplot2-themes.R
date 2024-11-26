@@ -20,8 +20,8 @@
 
 theme_avom <- function(font_family = "Fira Sans", font_size = 10,
                        font_color = "#282828",
-                       backround_color = "#fbf1c7",
-                       gridlines_color = "#d1c8c0",
+                       backround_color = "#faf7eb",
+                       gridlines_color = "#cfcbc6",
                        ...){
   ggplot2::theme_minimal() +
     ggplot2::theme(
@@ -41,10 +41,14 @@ theme_avom <- function(font_family = "Fira Sans", font_size = 10,
                                                     size = ggplot2::rel(0.8)),
       # Backround
       panel.background = ggplot2::element_rect(fill = backround_color, colour = NA),
-      plot.background = ggplot2::element_rect(fill = backround_color),
+      plot.background = ggplot2::element_rect(fill = backround_color, color = NA),
       # Grid Lines
       panel.grid.minor = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = gridlines_color,
                                                linetype = "dashed"),
+      # Legend
+      legend.position = "bottom",
+      legend.text = ggplot2::element_text(size = ggplot2::rel(1)),
+      legend.title = ggplot2::element_text(size = ggplot2::rel(1)),
       ...)
 }

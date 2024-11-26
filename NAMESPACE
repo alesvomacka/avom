@@ -2,8 +2,12 @@
 
 export(avom_ggplot2_defaults)
 export(avom_ggsave)
-export(avom_palettes)
+export(avom_palette)
+export(count_pct)
+export(palette_gen)
 export(scale_color_avom)
 export(scale_colour_avom)
 export(scale_fill_avom)
+export(select_diverging)
+export(setup_project)
 export(theme_avom)
