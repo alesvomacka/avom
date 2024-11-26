@@ -41,7 +41,7 @@ theme_avom <- function(font_family = "Fira Sans", font_size = 10,
                                                     size = ggplot2::rel(0.8)),
       # Backround
       panel.background = ggplot2::element_rect(fill = backround_color, colour = NA),
-      plot.background = ggplot2::element_rect(fill = backround_color),
+      plot.background = ggplot2::element_rect(fill = backround_color, color = NA),
       # Grid Lines
       panel.grid.minor = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = gridlines_color,
