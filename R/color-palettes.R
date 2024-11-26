@@ -58,6 +58,8 @@ avom_palette <- function(palette = "catpuccin_latte") {
     gruvbox_light       = avom_colors(name = "gruvbox_light", type = "nominal",
                                colors = c("#fb4934", "#b8bb26", "#83a598", "#fabd2f", "#d3869b", "#fe8019", "#8ec07c")),
     #Diverging palettes
+    redblue                = avom_colors(name = "RdYlBu", type = "diverging",
+                                colors = c("#D73027", "#F46D43", "#FDAE61", "#FEE090", "#FFFFBF", "#E0F3F8", "#ABD9E9", "#74ADD1", "#4575B4")),
     beach                 = avom_colors(name = "beach", type = "diverging",
                                colors = c("#264653", "#2a9d8f", "#e3ba54", "#f4a261", "#e76f51")),
     royal_orange          = avom_colors(name = "royal_orange", type = "diverging",
@@ -66,7 +68,9 @@ avom_palette <- function(palette = "catpuccin_latte") {
     rising_reds           = avom_colors(name = "rising_reds", type = "sequential",
                                colors = c("#461220", "#8c2f39", "#b23a48", "#fed0bb")),
     rising_blues          = avom_colors(name = "rising_blues", type = "sequential",
-                               colors = c("#0d1321","#1d2d44","#3e5c76","#f0ebd8"))
+                               colors = c("#0d1321","#1d2d44","#3e5c76","#f0ebd8")),
+    greys                 = avom_colors(name = "greys", type = "sequential",
+                               colors = c("#BDBDBD", "#969696", "#737373", "#525252", "#252525", "#000000"))
   )
 
   avom_palettes[[palette]]
