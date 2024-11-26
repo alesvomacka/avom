@@ -20,8 +20,8 @@
 
 theme_avom <- function(font_family = "Fira Sans", font_size = 10,
                        font_color = "#282828",
-                       backround_color = "#fbf1c7",
-                       gridlines_color = "#d1c8c0",
+                       backround_color = "#faf7eb",
+                       gridlines_color = "#cfcbc6",
                        ...){
   ggplot2::theme_minimal() +
     ggplot2::theme(
