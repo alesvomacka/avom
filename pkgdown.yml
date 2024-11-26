@@ -1,9 +1,8 @@
-pandoc: 2.19.2
-pkgdown: 2.0.7
+pandoc: 3.1.11
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-01-30T09:11Z
+last_built: 2024-11-26T22:43Z
 urls:
   reference: https://alesvomacka.github.io/avom/reference
   article: https://alesvomacka.github.io/avom/articles
-

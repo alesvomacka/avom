@@ -1,45 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://alesvomacka.github.io/avom/404.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/avom_ggplot2_defaults.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/avom_ggsave.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/avom_palette_generator.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/avom_palettes.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/diverging_color_extractor.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/scale_colour_avom.html</loc>
-  </url>
-  <url>
-    <loc>https://alesvomacka.github.io/avom/reference/theme_avom.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://alesvomacka.github.io/avom/404.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/LICENSE-text.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/LICENSE.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/authors.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/index.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/news/index.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/avom_colors.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/avom_ggplot2_defaults.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/avom_ggsave.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/avom_palette.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/count_pct.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/index.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/palette_gen.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/scale_colour_avom.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/select_diverging.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/setup_project.html</loc></url>
+<url><loc>https://alesvomacka.github.io/avom/reference/theme_avom.html</loc></url>
 </urlset>
+
