@@ -4,7 +4,12 @@
 \alias{setup_project}
 \title{Setup up Project Structure}
 \usage{
-setup_project()
+setup_project(air = TRUE, pak = TRUE)
+}
+\arguments{
+\item{air}{Sets up air.toml for Air formatter}
+
+\item{pak}{Installs pak (sets it up to work with renv if present)}
 }
 \value{
 Nothing
@@ -13,7 +18,7 @@ Nothing
 Sets up project structure.
 }
 \details{
-For now, just creates folders I usually use.
+Creates folders I usually use. Optionally also sets up air and pak.
 }
 \examples{
 \dontrun{
