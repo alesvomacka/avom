@@ -20,19 +20,25 @@
 #'
 #' avom_ggsave("mtcars-plot.png", mtcars_plot)
 #' }
-avom_ggsave <- function(filename,
-                        plot = ggplot2::last_plot(),
-                        width = 17, height = 8,
-                        scaling = 1, device = ragg::agg_png,
-                        ...) {
-  ggplot2::ggsave(filename = filename,
-                  plot = plot,
-                  width = width,
-                  height = height,
-                  scaling = scaling,
-                  units = "cm",
-                  device = device,
-                  ...)
+avom_ggsave <- function(
+  filename,
+  plot = ggplot2::last_plot(),
+  width = 17,
+  height = 8,
+  scaling = 1,
+  device = ragg::agg_png,
+  ...
+) {
+  ggplot2::ggsave(
+    filename = filename,
+    plot = plot,
+    width = width,
+    height = height,
+    scaling = scaling,
+    units = "cm",
+    device = device,
+    ...
+  )
 }
 
 #' Quickly set geoms defaults
@@ -47,9 +53,11 @@ avom_ggsave <- function(filename,
 #'
 #' @examples
 #' avom_ggplot2_defaults()
-avom_ggplot2_defaults <- function(def_color = "#83a598",
-                                  font_family = "Fira Sans",
-                                  font_color = "#282828"){
+avom_ggplot2_defaults <- function(
+  def_color = "#83a598",
+  font_family = "Fira Sans",
+  font_color = "#282828"
+) {
   # Colors and fills
   ggplot2::update_geom_defaults("col", list(fill = def_color))
   ggplot2::update_geom_defaults("ribbon", list(fill = def_color))
@@ -59,6 +67,8 @@ avom_ggplot2_defaults <- function(def_color = "#83a598",
   ggplot2::update_geom_defaults("pointrange", list(colour = def_color))
   ggplot2::update_geom_defaults("boxplot", list(colour = def_color))
   # Text
-  ggplot2::update_geom_defaults("text", list(family = font_family,
-                                             color = font_color))
+  ggplot2::update_geom_defaults(
+    "text",
+    list(family = font_family, color = font_color)
+  )
 }

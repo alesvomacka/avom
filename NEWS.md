@@ -1,3 +1,7 @@
+# avom 0.3.2
+* Updated to `ggplot2` 4.0.
+* Switchted from `ggtext` to `marquee`.
+
 # avom 0.2.1
 * Switched plot.caption from `ggtext::element_markdown()` to `ggtext::element_textbox_simple()`.
 

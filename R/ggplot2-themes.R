@@ -1,54 +1,63 @@
-#' ggplot2 theme from avom
+#' Custom ggplot2 theme with warm, paper-like aesthetics
 #'
-#' @description
-#' ggplot2 theme based on gruvbox color palette and Fira Sans font.
+#' A minimal ggplot2 theme based on `theme_minimal()` with customized fonts,
+#' colors, and legend positioning. Designed for a warm, paper-like aesthetic
+#' with configurable typography and color scheme.
 #'
-#' @param font_family Font family. Defaults to "Fira Sans".
-#' @param font_size Baseline size for text. Defaults to 10.
-#' @param font_color Font color. Defaults to "#282828".
-#' @param backround_color Backround color. Defaults to "#fbf1c7".
-#' @param gridlines_color Color of gridlines. Defaults to "#d1c8c0".
-#' @param ... Other arguments passed to [ggplot2::theme_minimal()].
+#' @param base_size Base font size in points. Default is 12.
+#' @param base_family Base font family for plot text. Default is "Fira Sans".
+#' @param header_family Font family for headers and titles. Default is "Arvo".
+#' @param ink Color for text and lines (analogous to ink on paper). Default is "#665c54".
+#' @param paper Background color (analogous to paper). Default is "cornsilk".
+#' @param accent Accent color for highlights and emphasis. Default is "#d65d0e".
+#'
+#' @return A ggplot2 theme object that can be added to a ggplot.
+#'
+#' @details
+#' The theme removes minor grid lines and positions the legend at the bottom
+#' with text above the legend keys. The function checks for font availability
+#' using `systemfonts::require_font()` before applying them.
+#'
+#' @examples
+#' \dontrun{
+#' library(ggplot2)
+#' ggplot(mtcars, aes(x = wt, y = mpg)) +
+#'   geom_point() +
+#'   theme_avom()
+#'
+#' # With custom colors
+#' ggplot(mtcars, aes(x = wt, y = mpg)) +
+#'   geom_point() +
+#'   theme_avom(ink = "#333333", paper = "white", accent = "#0066cc")
+#' }
+#'
 #' @export
-#'
-#' @examples \dontrun{
-#' ggplot2::ggplot(data = mtcars,
-#'                 mapping = ggplot2::aes(x = mpg, y = hp)) +
-#'          ggplot2::geom_point() +
-#'          theme_avom()
-#'          }
+theme_avom <- function(
+  base_size = 12,
+  base_family = "Fira Sans",
+  header_family = "Arvo",
+  ink = "#665c54",
+  paper = "cornsilk",
+  accent = "#d65d0e"
+) {
+  systemfonts::require_font(base_family, verbose = FALSE)
+  systemfonts::require_font(header_family, verbose = FALSE)
 
-theme_avom <- function(font_family = "Fira Sans", font_size = 10,
-                       font_color = "#282828",
-                       backround_color = "#faf7eb",
-                       gridlines_color = "#cfcbc6",
-                       ...){
-  ggplot2::theme_minimal() +
+  ggplot2::theme_minimal(
+    base_size = base_size,
+    base_family = base_family,
+    header_family = header_family,
+    base_line_size = base_size / 22,
+    base_rect_size = base_size / 22,
+    ink = ink,
+    paper = paper,
+    accent = accent
+  ) +
     ggplot2::theme(
-      # Text
-      text = ggplot2::element_text(family = font_family,
-                                   size = font_size,
-                                   color = font_color),
-      plot.title = ggtext::element_textbox_simple(size = ggplot2::rel(1.3)),
-      plot.title.position = "plot",
-      plot.caption.position = "plot",
-      plot.subtitle = ggtext::element_textbox_simple(size = ggplot2::rel(1.1),
-                                                     padding = ggplot2::margin(4, 0, 0, 0)),
-      axis.title = ggplot2::element_text(hjust = 0.9,
-                                         size = ggplot2::rel(1)),
-      axis.text = ggplot2::element_text(size = ggplot2::rel(0.9)),
-      plot.caption = ggtext::element_textbox_simple(hjust = 0,
-                                                    size = ggplot2::rel(0.8)),
-      # Backround
-      panel.background = ggplot2::element_rect(fill = backround_color, colour = NA),
-      plot.background = ggplot2::element_rect(fill = backround_color, color = NA),
-      # Grid Lines
       panel.grid.minor = ggplot2::element_blank(),
-      panel.grid.major = ggplot2::element_line(colour = gridlines_color,
-                                               linetype = "dashed"),
-      # Legend
       legend.position = "bottom",
-      legend.text = ggplot2::element_text(size = ggplot2::rel(1)),
-      legend.title = ggplot2::element_text(size = ggplot2::rel(1)),
-      ...)
+      legend.text.position = "top",
+      plot.title = marquee::element_marquee(),
+      plot.subtitle = marquee::element_marquee()
+    )
 }
