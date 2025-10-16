@@ -2,38 +2,54 @@
 % Please edit documentation in R/ggplot2-themes.R
 \name{theme_avom}
 \alias{theme_avom}
-\title{ggplot2 theme from avom}
+\title{Custom ggplot2 theme with warm, paper-like aesthetics}
 \usage{
 theme_avom(
-  font_family = "Fira Sans",
-  font_size = 10,
-  font_color = "#282828",
-  backround_color = "#faf7eb",
-  gridlines_color = "#cfcbc6",
-  ...
+  base_size = 12,
+  base_family = "Fira Sans",
+  header_family = "Arvo",
+  ink = "#665c54",
+  paper = "cornsilk",
+  accent = "#d65d0e"
 )
 }
 \arguments{
-\item{font_family}{Font family. Defaults to "Fira Sans".}
+\item{base_size}{Base font size in points. Default is 12.}
 
-\item{font_size}{Baseline size for text. Defaults to 10.}
+\item{base_family}{Base font family for plot text. Default is "Fira Sans".}
 
-\item{font_color}{Font color. Defaults to "#282828".}
+\item{header_family}{Font family for headers and titles. Default is "Arvo".}
 
-\item{backround_color}{Backround color. Defaults to "#fbf1c7".}
+\item{ink}{Color for text and lines (analogous to ink on paper). Default is "#665c54".}
 
-\item{gridlines_color}{Color of gridlines. Defaults to "#d1c8c0".}
+\item{paper}{Background color (analogous to paper). Default is "cornsilk".}
 
-\item{...}{Other arguments passed to \code{\link[ggplot2:ggtheme]{ggplot2::theme_minimal()}}.}
+\item{accent}{Accent color for highlights and emphasis. Default is "#d65d0e".}
+}
+\value{
+A ggplot2 theme object that can be added to a ggplot.
 }
 \description{
-ggplot2 theme based on gruvbox color palette and Fira Sans font.
+A minimal ggplot2 theme based on \code{theme_minimal()} with customized fonts,
+colors, and legend positioning. Designed for a warm, paper-like aesthetic
+with configurable typography and color scheme.
+}
+\details{
+The theme removes minor grid lines and positions the legend at the bottom
+with text above the legend keys. The function checks for font availability
+using \code{systemfonts::require_font()} before applying them.
 }
 \examples{
 \dontrun{
-ggplot2::ggplot(data = mtcars,
-                mapping = ggplot2::aes(x = mpg, y = hp)) +
-         ggplot2::geom_point() +
-         theme_avom()
-         }
+library(ggplot2)
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  theme_avom()
+
+# With custom colors
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  theme_avom(ink = "#333333", paper = "white", accent = "#0066cc")
+}
+
 }
