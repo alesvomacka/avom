@@ -2,21 +2,35 @@
 % Please edit documentation in R/color-palettes.R
 \name{palette_gen}
 \alias{palette_gen}
-\title{Color Palette Generator}
+\title{Color palette generator factory}
 \usage{
 palette_gen(palette = "catpuccin_latte", direction = 1)
 }
 \arguments{
-\item{palette}{Name of the palette.}
+\item{palette}{Name of the palette. See \code{\link[=avom_palette]{avom_palette()}} for the full list of valid names.}
 
-\item{direction}{Order of colors. Set to -1 to reverse the order}
+\item{direction}{\code{1} (default) returns colors in their natural order; \code{-1} reverses the order.}
 }
 \value{
-Function to be used in \code{\link[=scale_colour_avom]{scale_colour_avom()}} and \code{\link[=scale_fill_avom]{scale_fill_avom()}}.
+A \verb{function(n)} that returns a character vector of \code{n} hex color codes.
 }
 \description{
-Helper function to generate ggplot2 color palettes.
+Returns a function \verb{function(n)} that selects \code{n} colors from the named palette.
+This factory is used internally by \code{\link[=scale_colour_avom]{scale_colour_avom()}} and \code{\link[=scale_fill_avom]{scale_fill_avom()}} to
+satisfy ggplot2's discrete scale interface, but can also be called directly.
+
+Diverging palettes use \code{\link[=select_diverging]{select_diverging()}} to pick colors that preserve the
+symmetric structure of the palette. All other palette types return the first \code{n} colors,
+optionally reversed.
 }
 \examples{
-palette_gen(palette = "catpuccin_latte", direction = 1)
+# Create a generator then call it for 3 colors
+gen <- palette_gen("catpuccin_latte")
+gen(3)
+
+# Reversed order
+palette_gen("redblue", direction = -1)(5)
+}
+\seealso{
+\code{\link[=avom_palette]{avom_palette()}}, \code{\link[=select_diverging]{select_diverging()}}, \code{\link[=scale_colour_avom]{scale_colour_avom()}}
 }

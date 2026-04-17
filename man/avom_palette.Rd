@@ -2,25 +2,56 @@
 % Please edit documentation in R/color-palettes.R
 \name{avom_palette}
 \alias{avom_palette}
-\title{Color Palettes for avom}
+\title{Retrieve an avom color palette}
 \usage{
 avom_palette(palette = "catpuccin_latte")
 }
 \arguments{
-\item{palette}{Name of the palette.}
+\item{palette}{Name of the palette. One of:
+
+\strong{Nominal} (categorical, unordered data):
+\describe{
+\item{\code{"catpuccin_latte"}}{6 colors. Catppuccin Latte — warm, pastel light theme.}
+\item{\code{"catpuccin_frappe"}}{6 colors. Catppuccin Frappé — muted pastel mid-tone theme.}
+\item{\code{"catpuccin_macchiato"}}{6 colors. Catppuccin Macchiato — darker pastel theme.}
+\item{\code{"catpuccin_mocha"}}{6 colors. Catppuccin Mocha — dark-mode pastel theme.}
+\item{\code{"gruvbox"}}{7 colors. Gruvbox dark — retro, earthy dark theme.}
+\item{\code{"gruvbox_light"}}{7 colors. Gruvbox light — retro, earthy light theme.}
+}
+
+\strong{Diverging} (data with a meaningful midpoint):
+\describe{
+\item{\code{"redblue"}}{9 colors. Red–Yellow–Blue (ColorBrewer RdYlBu). Warm to cool.}
+\item{\code{"beach"}}{5 colors. Deep teal to warm coral — inspired by beach tones.}
+\item{\code{"royal_orange"}}{5 colors. Purple to burnt orange — bold contrast diverging.}
+}
+
+\strong{Sequential} (ordered data from low to high):
+\describe{
+\item{\code{"rising_reds"}}{4 colors. Dark crimson to soft blush.}
+\item{\code{"rising_blues"}}{4 colors. Dark navy to pale sand.}
+\item{\code{"greys"}}{6 colors. Light silver to near-black.}
+}}
 }
 \value{
-S7 object of class "avom_palette".
+Character vector of hex color codes with a \code{type} attribute
+(\code{"nominal"}, \code{"diverging"}, or \code{"sequential"}).
 }
 \description{
-Palettes for plotting.
-}
-\details{
-Returns an S7 object representing color palette. The existing palettes are:
-Nominal: catpuccin_latte, catpuccin_frappe, catpuccin_macchiato, catpuccing_mocha, gruvbox, gruvbox_light
-Diverging: beach, royal_orange
-Sequential: rising_reds, rising_blues
+Returns a character vector of hex color codes for the requested palette. The vector carries
+a \code{type} attribute (\code{"nominal"}, \code{"diverging"}, or \code{"sequential"}) used internally by
+\code{\link[=palette_gen]{palette_gen()}}.
 }
 \examples{
-avom_palette(palette = "catpuccin_latte")
+# Returns a plain character vector
+avom_palette("catpuccin_latte")
+
+# Inspect the palette type
+attr(avom_palette("beach"), "type")
+
+# Use with scales package for interpolation
+scales::show_col(avom_palette("gruvbox"))
+}
+\seealso{
+\code{\link[=palette_gen]{palette_gen()}}, \code{\link[=scale_colour_avom]{scale_colour_avom()}}, \code{\link[=scale_fill_avom]{scale_fill_avom()}}
 }

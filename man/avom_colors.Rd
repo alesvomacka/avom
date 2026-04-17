@@ -7,21 +7,17 @@
 avom_colors(name = character(0), type = character(0), colors = logical(0))
 }
 \arguments{
-\item{name}{Name of the class, "avom_palette".}
+\item{name}{Character. Identifier name for the palette.}
 
-\item{type}{Type of the of the palette: "nominal", "diverging" or "sequential".}
+\item{type}{Character. Palette type: \code{"nominal"}, \code{"diverging"}, or \code{"sequential"}.}
 
-\item{colors}{Vector of colors.}
+\item{colors}{Character vector of hex color codes.}
 }
 \value{
-S7 object of class "avom_palette".
+S7 object of class \code{"avom_palette"}.
 }
 \description{
-Creates a color palette, which is a S7 object of class "avom_palette", to be used in other functions.
+Internal S7 class used to define and validate color palettes. Not intended for direct use;
+use \code{avom_palette()} to retrieve palette colors.
 }
-\examples{
-\dontrun{
-avom_colors(name = "gruvbox", type = "nominal",
-colors = c("#cc241d", "#98971a", "#458588", "#d79921", "#b16286", "#d65d0e", "#689d6a"))
-}
-}
+\keyword{internal}

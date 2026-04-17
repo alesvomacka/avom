@@ -3,6 +3,7 @@
 export(avom_ggplot2_defaults)
 export(avom_ggsave)
 export(avom_palette)
+export(avom_palettes_all)
 export(count_pct)
 export(palette_gen)
 export(scale_color_avom)

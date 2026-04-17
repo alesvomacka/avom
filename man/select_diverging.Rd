@@ -2,21 +2,39 @@
 % Please edit documentation in R/color-palettes.R
 \name{select_diverging}
 \alias{select_diverging}
-\title{Select Colors from Diverging Palettes}
+\title{Select n colors from a diverging palette}
 \usage{
 select_diverging(palette, n)
 }
 \arguments{
-\item{palette}{Name of the palette.}
+\item{palette}{Character vector of hex color codes representing the full diverging palette.}
 
-\item{n}{Number of colors to select.}
+\item{n}{Number of colors to select. Must be between 1 and \code{length(palette)}.}
 }
 \value{
-Vector of colors.
+Character vector of \code{n} hex color codes in original palette order.
 }
 \description{
-Helper function to select colors from diverging palettes in correct order.
+Selects \code{n} colors from a diverging palette while preserving its symmetric, center-anchored
+structure. Rather than simply taking the first \code{n} colors, this function samples
+symmetrically from both ends of the palette:
+\itemize{
+\item \strong{Odd \code{n}}: the palette midpoint is always included, with an equal number of colors
+drawn from each side.
+\item \strong{Even \code{n}}: colors are drawn evenly from the left and right halves.
+}
+
+The selected colors are always returned in their original palette order.
 }
 \examples{
-select_diverging(palette = c("#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51"), n = 4)
+pal <- c("#264653", "#2a9d8f", "#e9c46a", "#f4a261", "#e76f51")
+
+# Odd n: midpoint included, balanced sides
+select_diverging(pal, n = 3)
+
+# Even n: two from each end
+select_diverging(pal, n = 4)
+}
+\seealso{
+\code{\link[=palette_gen]{palette_gen()}}, \code{\link[=avom_palette]{avom_palette()}}
 }
