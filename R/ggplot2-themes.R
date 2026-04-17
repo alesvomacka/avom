@@ -10,13 +10,13 @@
 #' @param ink Color for text and lines (analogous to ink on paper). Default is "#665c54".
 #' @param paper Background color (analogous to paper). Default is "cornsilk".
 #' @param accent Accent color for highlights and emphasis. Default is "#d65d0e".
+#' @param geom_ink Color for geoms, defaults to "#458588".
 #'
 #' @return A ggplot2 theme object that can be added to a ggplot.
 #'
 #' @details
 #' The theme removes minor grid lines and positions the legend at the bottom
 #' with text above the legend keys. The function checks for font availability
-#' using `systemfonts::require_font()` before applying them.
 #'
 #' @examples
 #' \dontrun{
@@ -38,11 +38,9 @@ theme_avom <- function(
   header_family = "Arvo",
   ink = "#665c54",
   paper = "cornsilk",
-  accent = "#d65d0e"
+  accent = "#d65d0e",
+  geom_ink = "#458588"
 ) {
-  systemfonts::require_font(base_family, verbose = FALSE)
-  systemfonts::require_font(header_family, verbose = FALSE)
-
   ggplot2::theme_minimal(
     base_size = base_size,
     base_family = base_family,
@@ -58,6 +56,10 @@ theme_avom <- function(
       legend.position = "bottom",
       legend.text.position = "top",
       plot.title = marquee::element_marquee(),
-      plot.subtitle = marquee::element_marquee()
+      plot.subtitle = marquee::element_marquee(),
+      geom = ggplot2::element_geom(
+        family = base_family,
+        ink = geom_ink
+      )
     )
 }

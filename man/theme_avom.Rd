@@ -10,7 +10,8 @@ theme_avom(
   header_family = "Arvo",
   ink = "#665c54",
   paper = "cornsilk",
-  accent = "#d65d0e"
+  accent = "#d65d0e",
+  geom_ink = "#458588"
 )
 }
 \arguments{
@@ -25,6 +26,8 @@ theme_avom(
 \item{paper}{Background color (analogous to paper). Default is "cornsilk".}
 
 \item{accent}{Accent color for highlights and emphasis. Default is "#d65d0e".}
+
+\item{geom_ink}{Color for geoms, defaults to "#458588".}
 }
 \value{
 A ggplot2 theme object that can be added to a ggplot.
@@ -37,7 +40,6 @@ with configurable typography and color scheme.
 \details{
 The theme removes minor grid lines and positions the legend at the bottom
 with text above the legend keys. The function checks for font availability
-using \code{systemfonts::require_font()} before applying them.
 }
 \examples{
 \dontrun{

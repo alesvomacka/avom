@@ -10,7 +10,7 @@ avom_ggsave(
   width = 17,
   height = 8,
   scaling = 1,
-  device = ragg::agg_png,
+  device = NULL,
   ...
 )
 }
@@ -25,12 +25,12 @@ avom_ggsave(
 
 \item{scaling}{Scaling factor for text. Defaults to 1.}
 
-\item{device}{Graphical device to use. Defaults to \code{\link[ragg:agg_png]{ragg::agg_png()}}.}
+\item{device}{Graphical device to use.}
 
 \item{...}{Other arguments passed to \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}}.}
 }
 \description{
-A simple wrapper around \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}}, which uses metric unit system and AGG graphical device by default.
+A simple wrapper around \code{\link[ggplot2:ggsave]{ggplot2::ggsave()}}, which uses metric unit system.
 }
 \examples{
 \dontrun{
