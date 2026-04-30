@@ -126,8 +126,6 @@ avom_colors <- S7::new_class(
       "#F46D43",
       "#FDAE61",
       "#FEE090",
-      "#FFFFBF",
-      "#E0F3F8",
       "#ABD9E9",
       "#74ADD1",
       "#4575B4"
@@ -136,7 +134,7 @@ avom_colors <- S7::new_class(
   beach = avom_colors(
     name = "beach",
     type = "diverging",
-    colors = c("#264653", "#2a9d8f", "#e3ba54", "#f4a261", "#e76f51")
+    colors = c("#264653", "#2a9d8f", "#e3ba54", "#e86100", "#ba160c")
   ),
   royal_orange = avom_colors(
     name = "royal_orange",
