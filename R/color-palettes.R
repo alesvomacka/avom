@@ -367,7 +367,7 @@ select_diverging <- function(palette, n) {
 #' be passed through `...`.
 #'
 #' @param palette Name of the palette. See [avom_palette()] for the full list of valid names.
-#'   Defaults to `"catpuccin_latte"`.
+#'   Defaults to `"gruvbox"`.
 #' @param direction `1` (default) uses colors in their natural order; `-1` reverses the order.
 #' @param ... Additional arguments passed to [ggplot2::discrete_scale()].
 #'
@@ -388,7 +388,7 @@ select_diverging <- function(palette, n) {
 #'   ggplot2::geom_bar() +
 #'   scale_fill_avom("gruvbox", direction = -1)
 
-scale_colour_avom <- function(palette = "catpuccin_latte", direction = 1, ...) {
+scale_colour_avom <- function(palette = "gruvbox", direction = 1, ...) {
   ggplot2::discrete_scale(
     "colour",
     "avom",
@@ -400,7 +400,7 @@ scale_colour_avom <- function(palette = "catpuccin_latte", direction = 1, ...) {
 #' @rdname scale_colour_avom
 #' @export
 #' @order 2
-scale_fill_avom <- function(palette = "catpuccin_latte", direction = 1, ...) {
+scale_fill_avom <- function(palette = "gruvbox", direction = 1, ...) {
   ggplot2::discrete_scale(
     "fill",
     "avom",
